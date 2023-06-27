@@ -79,11 +79,11 @@ class Drawer2D
         
         // vertex buffer
         glBindBuffer(GL_ARRAY_BUFFER, $this->VBO);
-        glBufferDataFloat(GL_ARRAY_BUFFER, $verticies, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, $verticies, GL_STATIC_DRAW);
         
         // index buffer
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, $this->EBO);
-        glBufferDataInt(GL_ELEMENT_ARRAY_BUFFER, $indices, GL_STATIC_DRAW);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, $indices, GL_STATIC_DRAW);
         
         // position attribute
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3, 0);
@@ -91,7 +91,7 @@ class Drawer2D
         
         // buffer the texture coordinates
         glBindBuffer(GL_ARRAY_BUFFER, $this->TCBO);
-        glBufferDataFloat(GL_ARRAY_BUFFER, $coords, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, $coords, GL_STATIC_DRAW);
         
         // texture coord attribute
         glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 2, 0);

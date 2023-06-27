@@ -64,7 +64,7 @@ class LineDrawer
         $this->shader->use();
 
         glBindBuffer(GL_ARRAY_BUFFER, $this->VBO);
-        glBufferDataFloat(GL_ARRAY_BUFFER, [$a->x, $a->y, $a->z, $b->x, $b->y, $b->z], GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, [$a->x, $a->y, $a->z, $b->x, $b->y, $b->z], GL_STATIC_DRAW);
 
         glBindVertexArray($this->VAO);
         glDrawArrays(GL_LINE_STRIP, 0, 2);

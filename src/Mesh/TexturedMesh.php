@@ -49,7 +49,7 @@ class TexturedMesh implements MeshInterface
         
         // vertex buffer
         glBindBuffer(GL_ARRAY_BUFFER, $this->VBO);
-        glBufferDataFloat(GL_ARRAY_BUFFER, $verticies, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, $verticies, GL_STATIC_DRAW);
         
         // position attribute
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8, 0);
