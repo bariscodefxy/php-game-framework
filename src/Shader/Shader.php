@@ -44,7 +44,7 @@ class Shader
 			throw new Exception('Shader type has to be either VERTEX or FRAGMENT.');
 		}
 		
-		glShaderSource($this->id, 1, $source);
+		glShaderSource($this->id, $source);
 		glCompileShader($this->id);
 		glGetShaderiv($this->id, GL_COMPILE_STATUS, $success);
 
